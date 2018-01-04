@@ -26,7 +26,7 @@ padding: 0;
 
  /* (100/12)* num-col */
 
-
+ 
  .col-1{width: 8.33333%;}
  .col-2{width: 16.666667%;}
  .col-3{width: 25%;}
@@ -40,8 +40,9 @@ padding: 0;
  .col-11{width: 91.6666667%;}
  .col-12{width: 100%;}
 
-@media all and (max-width: 450px){
+@media all and max-width: 450px){
 	[class*="col-"] {
 		width: 100%;
 	}
 }
+
