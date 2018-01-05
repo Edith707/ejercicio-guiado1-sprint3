@@ -1,7 +1,7 @@
 *{
 	margin: 0;
 	padding: 0;
-
+    
 }
 
 main > * {
@@ -20,7 +20,7 @@ body {
 main {
 	height: 100vh;
 	display: grid;
-	grid-template-columns: repeat(12,100px);
+	grid-template-columns: repeat(12, 1fr);
 	grid-template-rows: 3 auto;
 	grid-gap: 12px;
 	grid-template-areas: 

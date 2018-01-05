@@ -1,4 +1,4 @@
-
+/* quitando elementps originales que puedan interferir diseño*/
 *{
 	box-sizing: border-box;
 	margin: 0;
@@ -10,19 +10,23 @@
     margin: 0 auto;
 }
 */
-body {margin: 0 15px;}
+
+/*margen a los lados*/
+body {margin: 0 15px;} 
 .container{
 	width: 100%;
 	max-width: 100%;
 	margin: 0 auto;
 }
 
-.row:before, .row:after {
+/*limpiando entre columnas, antes y 
+despues del row hay un pequeño bloque*/
+.row::before, .row::after {
 	content: "";
 	display: table;
 	clear: both;
 }
-
+/*Todas las clases que empiecen con col*/
 [class*="col-"] {
 	float:left;
 	min-height: 7px;
@@ -46,7 +50,7 @@ body {margin: 0 15px;}
  .col-11{width: 91.6666667%;}
  .col-12{width: 100%;}
 
-
+/*usando clases para poner color a los divs*/
  .yellow{
  	background-color: yellow;
  }
@@ -66,24 +70,28 @@ body {margin: 0 15px;}
  	background-color: #913C7D;
  }
 
- 
+ /*Usando los queries para el diseño responsive*/
+ /*para una pantalla minima de 1200px*/
 @media only (min-width: 1200px) {
 	[class*="col-"] {
 		width:100%;
 	}
 }
+/*para una pantalla con minimo de 800 px y maximo 1199px*/
  @media only(min-width: 800px) and (max-width: 1199px) {
 	[class*="col-"] {
 		width:100%;
 	}
 }
 
+/*para una pantalla de mimimo 451px hasta 799px*/
  @media only(min-width: 451px) and (max-width: 799px) {
 	[class*="col-"] {
 		width:100%;
 	}
 }
 
+/*para una pantalla que tenga como maximo 450px*/
 @media only  (max-width: 450px){
  	[class*="col-"]{
  		width: 100%
